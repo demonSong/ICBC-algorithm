@@ -21,6 +21,8 @@ def time2date(t):
 
 def date2time(year,date):
     m,d = divmod(date,30)
+    if(d == 0):
+        d = 1
     return "%d-%02d-%02d" % (year,m,d)
 
 # year 暂时不起作用 startDate 的格式为 "01-07",num 为生成的随机日期的个数
