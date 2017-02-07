@@ -41,3 +41,15 @@ def randomDate(year,startDate,endDate,num):
     
     return dates
     
+def createWeekRange(startDate):
+    d1 = datetime.datetime.strptime(startDate,"%m-%d")
+    d2 = d1 + datetime.timedelta(7)
+    endDate = d2.strftime("%m-%d")
+    return startDate,endDate
+
+def createNextDate(startDate):
+    d1 = datetime.datetime.strptime(startDate,"%m-%d")
+    d2 = d1 + datetime.timedelta(1)
+    nextDate = d2.strftime("%m-%d")
+    return nextDate
+    
